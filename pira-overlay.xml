@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<repositories version="1.0">
+	<repo priority="50" quality="experimental" status="unofficial">
+		<name>pira-overlay</name>
+		<description>My personnal gentoo-overlay</description>
+		<homepage>https://github.com/Pira2409</homepage>
+		<owner>
+			<email>pthavan24@gmail.com</email>
+		</owner>
+		<source type="git">https://github.com/Pira2409/Pira</source>
+	</repo>
+</repositories>
+<?xml version="1.0" ?>
+
