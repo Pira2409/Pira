@@ -4,9 +4,7 @@
 
 EAPI=5
 
-inherit gnome2-utils
 
-MY_PN=AwOken
 DESCRIPTION="Monochrome/color-ish scalable icon theme with colorization"
 HOMEPAGE="http://alecive.deviantart.com/"
 SRC_URI="https://dl.dropbox.com/u/8029324/${MY_PN}-${PV}.zip -> ${P}.zip"
@@ -14,9 +12,9 @@ SRC_URI="https://dl.dropbox.com/u/8029324/${MY_PN}-${PV}.zip -> ${P}.zip"
 LICENSE="CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="colorization -minimal"
+IUSE="theme-color"
 
-RDEPEND="minimal? ( !x11-themes/gnome-icon-theme )
+RDEPEND="minimal? (  )
 	colorization? ( media-gfx/imagemagick )"
 DEPEND="${DEPEND}"
 
@@ -72,15 +70,4 @@ src_install()
 	dodoc README.pdf
 }
 
-pkg_preinst()
-{
-	gnome2_icon_savelist
-}
-pkg_postinst()
-{
-	gnome2_icon_cache_update
-}
-pkg_postrm()
-{
-	gnome2_icon_cache_update
-}
+
